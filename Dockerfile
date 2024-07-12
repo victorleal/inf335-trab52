@@ -2,6 +2,8 @@ FROM openjdk:17
 
 COPY src/ /src/
 
-RUN javac /src/br/unicamp/inf335/OlaUnicamp.java
+WORKDIR /src/br/unicamp/inf335/
 
-CMD ["java", "/src/br/unicamp/inf335/OlaUnicamp"]
+RUN javac OlaUnicamp.java
+
+CMD ["java", "OlaUnicamp"]
